@@ -1,0 +1,60 @@
+
+__________________________________________________________________________________________________________________________________________________________________________
+
+Write a program to perform matrix addition. Assume only square matrices of the same dimension.
+
+Input Format:
+
+   The input consists of (2*(m*m)+1) integers. The first integer corresponds to m, the number of rows / columns in the matrix . The next m*m integers correspond to the elements in the first matrix. The last m*m elements correspond to the elements in the second matrix. The elements are read in rowwise order, first row first, then second row and so on. Assume that the maximum value of m is 10.
+
+
+Output Format:
+
+   Refer sample output for details.
+
+Sample Input and Output :
+
+[ All text of bold corresponds to input ]
+
+2
+
+4 5
+
+6 9
+
+1 2
+
+3 4
+
+5 7
+
+9 13
+
+_______________________________________________________________________________________________________________________________________________________________________________
+
+_______________________________________________________________________________________________________________________________________________________________________________
+
+Code goes here.....
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int count =0;
+        int N = sc.nextInt();
+        int A[][] = new int[N][N];
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                A[i][j] = sc.nextInt();
+            }
+         }
+          for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+               if(A[i][j]<=10){
+                   count +=1;
+               }
+            }
+         }
+         System.out.println(count);
+    }
+}
